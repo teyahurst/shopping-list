@@ -1,6 +1,6 @@
 
 function handleCheckItem() {
-$('.shopping-item-toggle').on('click', event => {
+$('.shopping-list').on('click', '.shopping-item-toggle', event => {
 
 const targetItem = $(event.currentTarget).closest('li').find('.shopping-item')
 
@@ -13,7 +13,7 @@ targetItem.toggleClass('.shopping-item shopping-item__checked')
 
 
 function handleRemoveItem() {
-$('.shopping-item-delete').on('click', event => {
+$('.shopping-list').on('click', '.shopping-item-delete', event => {
   $(event.currentTarget).closest('li').remove()
   });
 };
@@ -37,8 +37,7 @@ function handleAddItem()  {
         </button>
       </div>
     </li>`)
-    $(handleCheckItem);
-    $(handleRemoveItem);
+    
   });
   
 };
